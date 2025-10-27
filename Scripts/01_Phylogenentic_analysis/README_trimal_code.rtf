@@ -1,0 +1,35 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red12\green12\blue12;
+\red226\green131\blue14;\red231\green231\blue231;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c5098\c5098\c5098;
+\cssrgb\c91373\c58431\c4706;\cssrgb\c92549\c92549\c92549;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 for gene in NP PA PB1 PB2 ; do\
+trimal -in "/04_alignment/mafft-mac/mafft_outputs/20240326_$\{gene\}_combined_mafft.fasta" -out "/05_trimal/$\{gene\}_trimal.fasta" -gt 0.80\
+done\
+\
+\
+This code takes the alignment made in MAFFT and trims it so that only coulis where 80% of residues are complete and then  saved into the trimmed_trimal folder
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+If it doesn\'92t work\
+1. Download Trimal\
+2. Save to desktop\
+3,. Cd to source\
+\'93Make\'94\
+Then 
+\f2\fs21 \cf3 \cb4 \expnd0\expndtw0\kerning0
+sudo \cf5 mv\cf3  trimAl readAl /usr/local/bin/\cf6 \cb1 \
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+Run script\
+\
+}

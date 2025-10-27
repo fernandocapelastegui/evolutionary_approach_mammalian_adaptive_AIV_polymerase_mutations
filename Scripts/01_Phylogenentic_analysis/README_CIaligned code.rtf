@@ -1,0 +1,22 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 for gene in NP PA PB1 PB2; do\
+        case $gene in\
+                NP) value=488 ;;\
+                PA) value=706 ;;\
+                PB1) value=747 ;;\
+                PB2) value=749 ;;\
+                *) value=0 ;;\
+        esac\
+        CIAlign --infile "/05_Trimal/$\{gene\}_trimal.fasta" --outfile_stem "06_cialign/$\{gene\}_trimal_cialigned"  --remove_short --remove_min_length $\{value\} \
+done\
+\
+\
+This code takes the alignment from MAFFT, removes sequences that are shorter than the values set above
+\f1\fs24 \cf0 \CocoaLigature1 \
+}

@@ -1,0 +1,36 @@
+---
+title: "Supplementary data - polymerase structure" 
+subtitle: "An evolutionary approach to identifying mammalian adaptive mutations in the avian influenza polymerase"
+author: "Fernando Capelastegui, Vidhi Dholakia, Damien C. Tully, Daniel H. Goldhill"
+output: html_document
+---
+<style type="text/css">
+.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+H5N1 asymmetric polymerase dimer bound to human ANP32B. Red: PA. Blue: PB2, Green PB1. PDB: 8R1J
+
+* Top 50 mutations observed by count. Colour gradient represents number of occurrences; the lighter the hue, the higher the count. 
+* Mutations which were selected for experimental analysis. 
+
+
+## Results {.tabset}
+
+
+### Top 50 mutations
+
+```{r, echo=FALSE, out.width="100%"}
+pol_model1_labels
+```
+
+### Mutations selected for analysis
+
+```{r, echo=FALSE, out.width="100%"}
+pol_model2_labels
+```
+
+

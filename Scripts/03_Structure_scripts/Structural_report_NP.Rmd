@@ -1,0 +1,51 @@
+---
+title: "Supplementary data - nucleoprotein structure" 
+subtitle: "An evolutionary approach to identifying mammalian adaptive mutations in the avian influenza polymerase"
+author: "Fernando Capelastegui, Vidhi Dholakia, Damien C. Tully, Daniel H. Goldhill"
+output: html_document
+---
+<style type="text/css">
+.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+H5N1 Nucleoprotein monomer (PDB:2Q06 - chain A) and H1N1 trimer structure (PDB:2IQH)
+
+* Top 50 mutations observed by count. Colour gradient represents number of occurrences; the lighter the hue, the higher the count. 
+* Mutations which were selected for experimental analysis. 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Results {.tabset}
+
+### Monomer - Top 50 mutations (NP)
+
+```{r, echo=FALSE, out.width="100%"}
+np_model1_labels
+```
+
+### Monomer - Mutations selected for analysis (NP)
+
+```{r, echo=FALSE, out.width="100%"}
+np_model3
+```
+
+
+### Trimer - Top 50 mutations (NP)
+
+```{r, echo=FALSE, out.width="100%"}
+trimer1_labelled
+```
+
+### Trimer - Mutations selected for analysis (NP)
+
+```{r, echo=FALSE, out.width="100%"}
+trimer3
+```
+
