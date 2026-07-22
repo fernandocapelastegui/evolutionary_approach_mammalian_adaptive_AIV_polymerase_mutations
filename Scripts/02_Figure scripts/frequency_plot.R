@@ -795,54 +795,7 @@ unique_mutation_count_seg_bar <- ggplot(seg_unique_mutation, aes(x=segment, y=n,
         device = "pdf",height = 18, width=20)
  
 
-# #Table of nice mutations:
-#  selected_all_list <- selected_all %>% 
-#    select(mutation, segment)
-#  
-#  selected_rationale <- raw_all %>% filter(selected=="yes") %>% 
-#    right_join(selected_all_list, by = c("mutation", "segment")) %>% 
-#    select(segment, mutation, n, percent_a, percent_m, unique_avian_mutation_events, spp_number, species_list, subtype_number, subtype_list) %>% 
-#    rename(  Segment = segment,
-#             Mutation = mutation,
-#             Count = n,
-#             'Freq. % in avian sequences'=percent_a,
-#             'Freq. % in mammal sequences'=percent_m,
-#             'Indpendent mutation occurence'= unique_avian_mutation_events,
-#             'Species count'= spp_number,
-#             "Species diversity"=species_list,
-#             "Subtype(s) n" = subtype_list,
-#             "Subtype(s)" = subtype_number) %>% 
-#    mutate(Notes = case_when(Mutation =="F313V"~"Not in filtered data but included as a positive control",
-#                             Mutation =="S524G"~"Not in filtered data but included as a positive control",
-#                             Mutation =="T263E"~"Not in filtered data but included as a high proportion of this mutation in swine",
-#                             Mutation =="K48Q"~"Known mutation",
-#                             Mutation =="L283P"~"Positive control",
-#                             Mutation =="Q357K"~"Positive control",
-#                             Mutation =="R351K"~"Known mutation",
-#                             Mutation =="R98K"~"Known mutation",
-#                             Mutation =="V100I"~"Positive control",
-#                             Mutation =="Y289H"~"Known mutation",
-#                             Mutation =="A284I"~"Seen in swine, high proporion in mammal vs avian squences",
-#                             Mutation =="G485R"~"Many independent emergences, and in different species",
-#                             Mutation =="I425V"~"Seen in a much higher proportion of mammalian sequences",
-#                             Mutation =="L136I"~"Seen in a much higher proportion of mammalian sequences",
-#                             Mutation =="M426L"~"Seen in a much higher proportion of mammalian sequences",
-#                             Mutation =="L418I"~"Occurs often, in a range of interesting species",
-#                             Mutation =="N21D"~"Seen in a much higher proportion of mammalian sequences and independently emerges",
-#                             Mutation =="A22T"~"Occurs frequently and independently in a range of species",
-#                             Mutation =="R384K"~"Occurs frequently and independently in a range of species",
-#                             Mutation =="R38K"~"Occurs frequently and seen in high proportion in mammals vs avian",
-#                             Mutation =="R400K"~"Occurs frequently and seen in high proportion in mammals vs avian",
-#                             Mutation =="R452K"~"Occurs frequently and seen in various species, high proportion in mammals vs avian",
-#                             Mutation =="T350K"~"Occurs frequently and seen in high proportion in mammals vs avian",
-#                             Mutation =="V33I"~"Occurs frequently, independently, seen in various species, high proportion in mammals vs avian",
-#                             Mutation =="I217V"~"Occurs frequently and seen in high proportion in mammals vs avian",
-#                             Mutation =="V456L"~"Occurs often, in a range of interesting species,high proportion in mammals vs avian",
-#                             TRUE ~ NA))
-#                             
-#    write_xlsx(selected_rationale, path = '/Users/capelastegui.f/Library/CloudStorage/OneDrive-RoyalVeterinaryCollege/PhD/Literature/Papers/250 mutation project/Final data/Graph_figures/Table_S2.xlsx', col_names = TRUE)  
-#    
-#    
+
    selected_manual <- read_xlsx('/Graph_figures/Table_S2_manual.xlsx') %>%
      arrange(Segment) %>% 
      select(-res)

@@ -3,12 +3,12 @@ library(stringr)
 
 # run the script that collects the EPI_ISL for sequences with mutation
 
-source(file = "/Users/capelastegui.f/git/evolutionary_approach_mammalian_adaptive_AIV_polymerase_mutations/Scripts/02_Figure scripts/mutation_lists_ids.R")
+source(file = "gitfilepath/git/evolutionary_approach_mammalian_adaptive_AIV_polymerase_mutations/Scripts/02_Figure scripts/mutation_lists_ids.R")
 
 # FIle path configs
 
-tree_dir   <- "/Users/capelastegui.f/git/mutation_pathway/Data/Final/07_trees"
-output_dir <- "/Users/capelastegui.f/git/evolutionary_approach_mammalian_adaptive_AIV_polymerase_mutations/Figures/trees/"
+tree_dir   <- "gitfilepath/git/mutation_pathway/Data/Final/07_trees"
+output_dir <- "gitfilepath/git/evolutionary_approach_mammalian_adaptive_AIV_polymerase_mutations/Figures/trees/"
 
 
 segments <- list(
