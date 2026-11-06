@@ -1,0 +1,118 @@
+---
+title: "Supplementary data" 
+subtitle: "An evolutionary approach to identifying mammalian adaptive mutations in the avian influenza polymerase"
+author: "Fernando Capelastegui, Vidhi Dholakia, Maryn D. Brown, Damien C. Tully, Daniel H. Goldhill"
+output: html_document
+---
+<style type="text/css">
+.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Metadata
+
+* Mutation = Mutation identified
+* Residue = Residue number
+* Amino Acid = Amino acid seen in mammalian sequence
+* Count = Frequency of residue occurrence
+* Freq. % in avian sequences = Proportion of sequences where that amino acid occurred in avian sequences in whole alignment
+* Freq. % in mammal sequences = Proportion of sequences where that amino acid occurred in mammalian sequences in whole alignment
+* Independent mutation occurrence = How many times did this mutation arise between a mammal and a bird, where the avian sequence is unique
+* Average Distance = The average edge count between avian and mammal sequence where this mutation emerged
+* Species count = In how many mammalian species this mutation was identified
+* Species diversity = List of species mutation occurred in. Note: species label is as accurate as the metadata provided and aggregated into common naming conventions. For sequences where metadata did not contain sufficient information, species was labelled as "mammal"
+* Subtype(s) = Subtype of mammalian isolate in which mutation was identified
+* Subtype(s) n = Number of different subtypes in which mutation was identified
+
+## {.tabset}
+
+### PB2
+
+
+```{r, echo=FALSE}
+
+reactable(pb2_clean,defaultSorted = list(count="desc"), defaultPageSize = 20,
+  showPageSizeOptions = TRUE,
+  pageSizeOptions = c(10, 20, 50, 100))
+```
+
+### PB1
+
+
+```{r, echo=FALSE}
+
+reactable(pb1_clean,defaultSorted = list(count="desc"), defaultPageSize = 20,
+  showPageSizeOptions = TRUE,
+  pageSizeOptions = c(10, 20, 50, 100))
+```
+
+### PA
+
+
+```{r, echo=FALSE}
+
+reactable(pa_clean,defaultSorted = list(count="desc"), defaultPageSize = 20,
+  showPageSizeOptions = TRUE,
+  pageSizeOptions = c(10, 20, 50, 100))
+```
+
+### NP
+
+
+```{r, echo=FALSE}
+
+reactable(np_clean,defaultSorted = list(count="desc"), defaultPageSize = 20,
+  showPageSizeOptions = TRUE,
+  pageSizeOptions = c(10, 20, 50, 100))
+```
+
+### Unique emergence plot
+
+#### Interactive Figure 3. Sum of independent emergences at residue stacked by individual mutation for each polymerase segment and NP. Independent emergence classified as a unique avian sequences for each mammal-avian pair mutation was identified in. 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width="100%"}
+frequency_plot_unique_plotly
+```
+
+### Mutation frequency plot
+
+#### Interactive Figure S1. Sum of all mutations at residue stacked by individual mutation for each polymerase segment and NP.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width="100%"}
+frequency_plotly
+```
+
+### Amino acid frequency plot
+
+#### Interactive Figure S2. Heatmap of amino acid residues seen in mammalian sequences. Coloured by frequency on a log10 scale. Mutations selected for analysis circled.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE,out.width="100%"}
+plotlytile
+
+```
+
+
+### Species diversity plot
+
+#### Interactive Figure S3. Stacked count of unique species associated per mutation. Red line overlaid displays unique species at residue position.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width="100%"}
+frequency_plot_spp_plotly
+```
+
+
+### Mutations selected for analysis
+```{r, echo=FALSE}
+
+reactable(selected_manual, defaultPageSize = 25,
+  showPageSizeOptions = TRUE,
+  pageSizeOptions = c(10, 20, 50, 100))
+```
+
+

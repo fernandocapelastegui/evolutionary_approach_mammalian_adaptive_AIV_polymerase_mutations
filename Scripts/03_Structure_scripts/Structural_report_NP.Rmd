@@ -1,7 +1,7 @@
 ---
 title: "Supplementary data - nucleoprotein structure" 
 subtitle: "An evolutionary approach to identifying mammalian adaptive mutations in the avian influenza polymerase"
-author: "Fernando Capelastegui, Vidhi Dholakia, Damien C. Tully, Daniel H. Goldhill"
+author: "Fernando Capelastegui, Vidhi Dholakia, Maryn D. Brown, Damien C. Tully, Daniel H. Goldhill"
 output: html_document
 ---
 <style type="text/css">

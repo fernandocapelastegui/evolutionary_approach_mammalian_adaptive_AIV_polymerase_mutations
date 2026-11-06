@@ -1,6 +1,6 @@
 
 
-np_mutations <- read_excel(paste0("/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "NP")%>% select(residue, n)%>% group_by(residue) %>% 
+np_mutations <- read_excel(paste0("/Users/capelastegui.f/git/mutation_pathway/Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "NP")%>% select(residue, n)%>% group_by(residue) %>% 
   summarise_at(vars(n), list(sum = sum)) %>% arrange(-sum)%>% top_n(50)%>% 
   mutate(normalised = (sum - min(sum)) / (max(sum) - min(sum)),
          segment = "NP")

@@ -1,7 +1,7 @@
-pa<- read_excel(paste0("/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "PA")
-pb1<- read_excel(paste0("/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "PB1")
-np<- read_excel(paste0("/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "NP")
-pb2<- read_excel(paste0("/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "PB2")
+pa<- read_excel(paste0("/Users/capelastegui.f/git/mutation_pathway/Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "PA")
+pb1<- read_excel(paste0("/Users/capelastegui.f/git/mutation_pathway/Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "PB1")
+np<- read_excel(paste0("/Users/capelastegui.f/git/mutation_pathway/Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "NP")
+pb2<- read_excel(paste0("/Users/capelastegui.f/git/mutation_pathway/Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "PB2")
 
 output_dir<-"/Graph_figures/"
 
@@ -796,7 +796,7 @@ unique_mutation_count_seg_bar <- ggplot(seg_unique_mutation, aes(x=segment, y=n,
  
 
 
-   selected_manual <- read_xlsx('/Graph_figures/Table_S2_manual.xlsx') %>%
+   selected_manual <- read_xlsx('/Users/capelastegui.f/git/evolutionary_approach_mammalian_adaptive_AIV_polymerase_mutations/Figures/Table_S2.xlsx') %>%
      arrange(Segment) %>% 
      select(-res)
 #    
