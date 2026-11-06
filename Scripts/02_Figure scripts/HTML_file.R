@@ -1,9 +1,9 @@
 #Import data:
 
-pa<- read_excel(paste0("Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "PA")
-pb1<- read_excel(paste0("Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "PB1")
-np<- read_excel(paste0("Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "NP")
-pb2<- read_excel(paste0("Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "PB2")
+pa<- read_excel(paste0("/Users/capelastegui.f/git/mutation_pathway/Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "PA")
+pb1<- read_excel(paste0("/Users/capelastegui.f/git/mutation_pathway/Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "PB1")
+np<- read_excel(paste0("/Users/capelastegui.f/git/mutation_pathway/Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "NP")
+pb2<- read_excel(paste0("/Users/capelastegui.f/git/mutation_pathway/Data/Output/Output_tables/Paper_final/mutation_loookup",tdate,".xlsx"), sheet = "PB2")
 
 nice_table_layout_function <- function(data){
   data <- data %>% select(mutation, 
@@ -25,7 +25,7 @@ nice_table_layout_function <- function(data){
            'Freq. % in avian sequences'=percent_a,
            'Freq. % in mammal sequences'=percent_m,
            'Indpendent mutation occurence'= unique_avian_mutation_events,
-           "Average distance" = avg_dist,
+           "Average Distance" = avg_dist,
            'Species count'=spp_number,
            "Species diversity"=species_list,
            "Subtype(s)" = subtype_list,
